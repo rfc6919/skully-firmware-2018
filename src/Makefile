@@ -19,5 +19,6 @@
 
 BINARY = cdcacm
 
-include ../../Makefile.include
-
+OPENCM3_DIR=../libopencm3
+LDSCRIPT=$(OPENCM3_DIR)/lib/stm32/f0/stm32f04xz6.ld
+include ../libopencm3.target.mk
