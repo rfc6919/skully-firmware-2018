@@ -238,18 +238,18 @@ int main(void)
 	rcc_clock_setup_in_hsi_out_48mhz();
 
 	rcc_periph_clock_enable(RCC_GPIOA);
-	rcc_periph_clock_enable(RCC_AFIO);
+	//rcc_periph_clock_enable(RCC_AFIO);
 
-	AFIO_MAPR |= AFIO_MAPR_SWJ_CFG_JTAG_OFF_SW_ON;
+	//AFIO_MAPR |= AFIO_MAPR_SWJ_CFG_JTAG_OFF_SW_ON;
 
-	gpio_set_mode(GPIOA, GPIO_MODE_INPUT, 0, GPIO15);
+	//gpio_set_mode(GPIOA, GPIO_MODE_INPUT, 0, GPIO15);
 
-	usbd_dev = usbd_init(&st_usbfs_v1_usb_driver, &dev, &config, usb_strings, 3, usbd_control_buffer, sizeof(usbd_control_buffer));
+	usbd_dev = usbd_init(&st_usbfs_v2_usb_driver, &dev, &config, usb_strings, 3, usbd_control_buffer, sizeof(usbd_control_buffer));
 	usbd_register_set_config_callback(usbd_dev, cdcacm_set_config);
 
-	gpio_set(GPIOA, GPIO15);
-	gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_2_MHZ,
-		      GPIO_CNF_OUTPUT_PUSHPULL, GPIO15);
+	//gpio_set(GPIOA, GPIO15);
+	//gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_2_MHZ,
+	//	      GPIO_CNF_OUTPUT_PUSHPULL, GPIO15);
 
 	while (1)
 		usbd_poll(usbd_dev);
