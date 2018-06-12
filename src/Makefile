@@ -17,7 +17,7 @@
 ## along with this library.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-BINARY = cdcacm
+BINARY=skully
 
 OPENCM3_DIR=../libopencm3
 LDSCRIPT=$(OPENCM3_DIR)/lib/stm32/f0/stm32f04xz6.ld
