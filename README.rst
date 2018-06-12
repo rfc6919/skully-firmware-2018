@@ -14,3 +14,5 @@ Built on libopencm3, currently provides only a loopback CDC-ACM. Currently plann
   b) will damage the stm32 MCU.
 
   .. image:: doc/skully-mod.jpg
+
+Code imported from libopencm3 or libopencm3-examples is licensed under the LGPL version 3 or later (per upstream). Code native to this repository is freed per the UNLICENSE.
