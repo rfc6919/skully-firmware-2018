@@ -158,9 +158,9 @@ static const struct usb_config_descriptor config = {
 };
 
 static const char *usb_strings[] = {
-	"Black Sphere Technologies",
-	"CDC-ACM Demo",
-	"DEMO",
+	"OzSecCon",
+	"Skully2018 CDC-ACM",
+	"DEMO", // see https://techoverflow.net/2015/02/03/reading-the-stm32-unique-device-id-in-c/
 };
 
 /* Buffer to be used for control requests. */
